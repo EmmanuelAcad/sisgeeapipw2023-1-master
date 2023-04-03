@@ -7,7 +7,7 @@ const getPrediosDB = async () => {
         pool.query('SELECT * FROM predios ORDER BY codigo');
         return rows.map((predio) => new Predio(predio.codigo, predio.nome,
             predio.descricao, predio.sigla));
-    } catch(err){
+    } catch (err) {
         throw "Erro: " + err;
     }
 }
