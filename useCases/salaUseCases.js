@@ -68,7 +68,7 @@ const getSalaPorCodigoDB = async (codigo) => {
         if (results.rowCount == 0) {
             throw `Nenhum registro encontrado com o código ${codigo}`;
         } else {
-            const sala = results.row[0];
+            const sala = results.rows[0];
             return new Sala(sala.codigo, sala.numero, sala.descricao, sala.capacidade, sala.predio)
         }
 
